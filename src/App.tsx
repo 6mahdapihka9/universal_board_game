@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter, Navigate, Route, Routes,
+} from 'react-router-dom';
+import DashboardLayout from './layouts/DashboardLayout';
+import AuthenticationLayout from './layouts/AuthenticationLayout';
+import GameLayout from './layouts/GameLayout';
+import Dashboard from './components/Dashboard/Dashboard';
+import Game from './components/Game/Game';
+import Login from './components/Authentication/Login';
+import Registration from './components/Authentication/Registration';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<DashboardLayout />}>
+        <Route index element={<Dashboard />} />
+      </Route>
+      <Route path="/game" element={<GameLayout />}>
+        <Route path=":id" element={<Game />} />
+      </Route>
+      <Route path="/auth" element={<AuthenticationLayout />}>
+        <Route path="login" element={<Login />} />
+        <Route path="registration" element={<Registration />} />
+      </Route>
+      <Route path="*" element={<Navigate to="/" />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
