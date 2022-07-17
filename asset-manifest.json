@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/universal_board_game/static/css/main.e6c13ad2.css",
+    "main.js": "/universal_board_game/static/js/main.1d0f617c.js",
+    "static/js/787.c2a38cbb.chunk.js": "/universal_board_game/static/js/787.c2a38cbb.chunk.js",
+    "index.html": "/universal_board_game/index.html",
+    "main.e6c13ad2.css.map": "/universal_board_game/static/css/main.e6c13ad2.css.map",
+    "main.1d0f617c.js.map": "/universal_board_game/static/js/main.1d0f617c.js.map",
+    "787.c2a38cbb.chunk.js.map": "/universal_board_game/static/js/787.c2a38cbb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.1d0f617c.js"
+  ]
+}
