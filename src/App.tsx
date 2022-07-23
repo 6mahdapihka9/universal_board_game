@@ -10,6 +10,7 @@ import Game from './components/Game/Game';
 import Login from './components/Authentication/Login';
 import Registration from './components/Authentication/Registration';
 import Test from './components/Test/Test';
+import BarleyBreakGame from './components/barley-break game/BarleyBreakGame';
 
 const App = () => (
   <BrowserRouter>
@@ -24,6 +25,7 @@ const App = () => (
         <Route path="login" element={<Login />} />
         <Route path="registration" element={<Registration />} />
       </Route>
+      <Route path="/barley-break" element={<BarleyBreakGame />} />
       <Route path="/test" element={<Test />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
